@@ -1,0 +1,178 @@
+.section {
+  background-color: #41372e;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  max-width: 1440px;
+  width: 100%;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.headerArea {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 140px 0 40px;
+}
+
+.title {
+  font-family: "Geist", "Geist Placeholder", sans-serif;
+  font-size: 96px;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 1em;
+  color: #fff;
+  margin: 0;
+}
+
+.contentGrid {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+/* Contact information row */
+.infoRow {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  border-top: 1px solid #fff;
+  padding: 0;
+}
+
+.infoLabel {
+  flex: 0 0 auto;
+  padding: 8px 0;
+}
+
+.infoLabelText {
+  font-family: "Geist", "Geist Placeholder", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.4em;
+  color: #fff;
+  margin: 0;
+}
+
+.infoDetails {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.infoDetailRow {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding: 16px 0;
+  width: 100%;
+}
+
+.infoDetailRow + .infoDetailRow {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.infoDetailLabel {
+  flex: 1;
+  font-family: "Geist", "Geist Placeholder", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5em;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+}
+
+.infoDetailValue {
+  flex: 1;
+  font-family: "Geist", "Geist Placeholder", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5em;
+  color: #fff;
+  margin: 0;
+}
+
+/* Description + image row */
+.descriptionRow {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  border-top: 1px solid #fff;
+}
+
+.descriptionCol {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 8px 0;
+}
+
+.descriptionText {
+  font-family: "Geist", "Geist Placeholder", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.4em;
+  color: #fff;
+  margin: 0;
+  max-width: 500px;
+}
+
+.imageCol {
+  flex: 1;
+  aspect-ratio: 1.33333;
+  padding: 0 64px 0 0;
+  display: flex;
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 1439.98px) and (min-width: 810px) {
+  .title {
+    font-size: 78px;
+  }
+}
+
+@media (max-width: 809.98px) {
+  .container {
+    padding: 0 24px;
+  }
+
+  .headerArea {
+    gap: 24px;
+  }
+
+  .title {
+    font-size: 48px;
+  }
+
+  .infoRow,
+  .descriptionRow {
+    flex-direction: column;
+  }
+
+  .infoLabel,
+  .descriptionCol {
+    width: 100%;
+  }
+
+  .imageCol {
+    display: none;
+  }
+}

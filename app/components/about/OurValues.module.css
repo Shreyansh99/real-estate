@@ -1,0 +1,218 @@
+.section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  width: 100%;
+  padding: 64px 0;
+  overflow: hidden;
+}
+
+.backgroundImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 1;
+  mask: linear-gradient(#000 30%, rgba(0, 0, 0, 0.6) 100%);
+  -webkit-mask: linear-gradient(#000 30%, rgba(0, 0, 0, 0.6) 100%);
+}
+
+.container {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 40px;
+}
+
+.title {
+  font-family: "Geist", "Geist Placeholder", sans-serif;
+  font-size: 96px;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 1em;
+  color: #fff;
+  margin: 0;
+  text-align: left;
+  width: 100%;
+}
+
+.introRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 24px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.spacer {
+  flex: 1;
+  height: 17px;
+}
+
+.introContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.introText {
+  font-family: "Geist", "Geist Placeholder", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 1em;
+  color: #fff;
+  margin: 0;
+  max-width: 400px;
+}
+
+.valuesGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+}
+
+.valueItem {
+  width: 100%;
+}
+
+.valueRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.valueSpacer {
+  flex: 1;
+  height: 17px;
+}
+
+.valueCard {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 24px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.valueNumber {
+  font-family: "Geist", "Geist Placeholder", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  line-height: 1.2em;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0;
+}
+
+.valueTitle {
+  font-family: "Geist", "Geist Placeholder", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 1em;
+  color: #fff;
+  margin: 0;
+  max-width: 400px;
+}
+
+.valueDescription {
+  font-family: "Geist", "Geist Placeholder", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6em;
+  color: #fff;
+  margin: 0;
+  max-width: 400px;
+}
+
+@media (max-width: 809px) {
+  .container {
+    padding: 0 24px;
+  }
+
+  .title {
+    font-size: 48px;
+  }
+
+  .introRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .spacer {
+    display: none;
+  }
+
+  .introText {
+    font-size: 28px;
+    max-width: 100%;
+  }
+
+  .valueSpacer {
+    display: none;
+  }
+
+  .valueRow {
+    flex-direction: column;
+  }
+
+  .valueCard {
+    width: 100%;
+  }
+
+  .valueTitle {
+    font-size: 28px;
+    max-width: 100%;
+  }
+
+  .valueDescription {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 810px) and (max-width: 1439px) {
+  .title {
+    font-size: 78px;
+  }
+
+  .introText {
+    font-size: 24px;
+  }
+
+  .valueTitle {
+    font-size: 24px;
+  }
+}

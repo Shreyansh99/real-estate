@@ -1,0 +1,165 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+  width: 100%;
+  padding: 140px 0;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 40px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+}
+
+.labelColumn {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.label {
+  font-family: "Geist", "Geist Placeholder", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  line-height: 1.2em;
+  text-transform: uppercase;
+  color: #000;
+  margin: 0;
+}
+
+.contentColumn {
+  width: 59%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.heading {
+  font-family: "Geist", "Geist Placeholder", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 1em;
+  color: #000;
+  margin: 0;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.paragraph {
+  font-family: "Geist", "Geist Placeholder", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6em;
+  color: #000;
+  margin: 0;
+}
+
+.statsRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.statCard {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+  background-color: rgb(245, 245, 245);
+  padding: 24px;
+  min-height: 140px;
+}
+
+.statValue {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  font-family: "Geist", "Geist Placeholder", sans-serif;
+  font-size: 64px;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1;
+  color: #000;
+}
+
+.statNumber {
+  color: inherit;
+}
+
+.statSuffix {
+  color: inherit;
+}
+
+.statLabel {
+  font-family: "Geist", "Geist Placeholder", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6em;
+  color: #000;
+  margin: 0;
+}
+
+@media (max-width: 809px) {
+  .section {
+    padding: 80px 0;
+  }
+
+  .container {
+    padding: 0 24px;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .labelColumn,
+  .contentColumn {
+    width: 100%;
+  }
+
+  .heading {
+    font-size: 24px;
+  }
+
+  .statsRow {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .statValue {
+    font-size: 48px;
+  }
+}
+
+@media (min-width: 810px) and (max-width: 1439px) {
+  .heading {
+    font-size: 24px;
+  }
+}

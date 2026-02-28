@@ -1,0 +1,75 @@
+.heroSection {
+  width: 100%;
+  padding: 140px 0;
+  overflow: clip;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.title {
+  font-family: "Geist", "Geist Placeholder", sans-serif;
+  font-size: 96px;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 1em;
+  color: #000;
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(50px, 1fr));
+  gap: 10px 20px;
+}
+
+.spacer {
+  grid-column: span 8;
+}
+
+.subtitle {
+  grid-column: span 4;
+  font-family: "Geist", "Geist Placeholder", sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 1em;
+  color: #000;
+  margin: 0;
+}
+
+@media (max-width: 1439.98px) and (min-width: 810px) {
+  .title {
+    font-size: 78px;
+  }
+  .subtitle {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 809.98px) {
+  .container {
+    padding: 0 24px;
+  }
+  .title {
+    font-size: 48px;
+  }
+  .grid {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .spacer {
+    display: none;
+  }
+  .subtitle {
+    flex: 1;
+    font-size: 24px;
+  }
+}

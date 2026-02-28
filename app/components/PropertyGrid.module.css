@@ -1,0 +1,28 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(50px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+.empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 60px 20px;
+  font-family: "Geist", "Geist Placeholder", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 810px) and (max-width: 1439px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(50px, 1fr));
+  }
+}
+
+@media (max-width: 809px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

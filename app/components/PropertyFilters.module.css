@@ -1,0 +1,145 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.searchWrapper {
+  position: relative;
+  min-width: 200px;
+  flex: 0 0 250px;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 12px 40px 12px 20px;
+  height: 50px;
+  outline: none;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+  background-color: transparent;
+  font-family: "Geist", "Geist Placeholder", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 50px;
+  color: #000;
+}
+
+.searchInput::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.searchInput:focus {
+  border-color: rgba(0, 0, 0, 0.5);
+}
+
+.filterButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 50px;
+  padding: 0 24px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 40px;
+  background-color: transparent;
+  cursor: pointer;
+  font-family: "Geist", "Geist Placeholder", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.3px;
+  line-height: 1.2em;
+  color: #000;
+  white-space: nowrap;
+  position: relative;
+  transition: border-color 0.2s;
+}
+
+.filterButton:hover {
+  border-color: rgba(0, 0, 0, 0.5);
+}
+
+.filterButton.active {
+  border-color: #000;
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.chevron {
+  width: 12px;
+  height: 12px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+}
+
+.chevron.open {
+  transform: rotate(180deg);
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  min-width: 160px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdownItem {
+  padding: 8px 14px;
+  font-family: "Geist", "Geist Placeholder", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #000;
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+  background: none;
+  text-align: left;
+  transition: background-color 0.15s;
+}
+
+.dropdownItem:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.dropdownItem.selected {
+  font-weight: 600;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.allFilterButton {
+  display: none;
+}
+
+@media (max-width: 809px) {
+  .searchWrapper {
+    flex: 1 1 100%;
+  }
+
+  .filterButton {
+    display: none;
+  }
+
+  .allFilterButton {
+    display: flex;
+  }
+}

@@ -1,0 +1,116 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 140px 40px 80px;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+  width: 100%;
+  max-width: 1440px;
+}
+
+.topRow {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+}
+
+.labelColumn {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.label {
+  font-family: "Geist", "Geist Placeholder", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  line-height: 1.2em;
+  text-transform: uppercase;
+  color: #000;
+  margin: 0;
+}
+
+.headingColumn {
+  width: 59%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.heading {
+  font-family: "Geist", "Geist Placeholder", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 1em;
+  color: #000;
+  margin: 0;
+}
+
+.logoGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  width: 100%;
+}
+
+.logoItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(245, 245, 245);
+  padding: 40px 24px;
+  min-height: 100px;
+}
+
+.logoText {
+  font-family: "Geist", "Geist Placeholder", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.4em;
+  color: rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+@media (max-width: 809px) {
+  .section {
+    padding: 80px 24px 60px;
+  }
+
+  .topRow {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .labelColumn,
+  .headingColumn {
+    width: 100%;
+  }
+
+  .heading {
+    font-size: 24px;
+  }
+
+  .logoGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 810px) and (max-width: 1439px) {
+  .heading {
+    font-size: 24px;
+  }
+}

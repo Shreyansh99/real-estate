@@ -1,0 +1,133 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 30px;
+  padding: 6px 16px;
+  font-family: "Geist", "Geist Placeholder", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.4em;
+  color: #000;
+  text-transform: capitalize;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.titleRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.name {
+  font-family: "Geist", "Geist Placeholder", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.2em;
+  color: #000;
+  margin: 0;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-right: 8px;
+}
+
+.price {
+  font-family: "Geist", "Geist Placeholder", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #000;
+  white-space: nowrap;
+  margin: 0;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px;
+}
+
+.address {
+  font-family: "Geist", "Geist Placeholder", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.4em;
+  color: #000;
+  margin: 0;
+}
+
+.stats {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0;
+  flex-wrap: wrap;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.statValue,
+.statLabel {
+  font-family: "Geist", "Geist Placeholder", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.4em;
+  color: #000;
+}
+
+.divider {
+  width: 1px;
+  height: 14px;
+  background-color: rgba(0, 0, 0, 0.2);
+  margin: 0 12px;
+}

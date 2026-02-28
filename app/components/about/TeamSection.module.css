@@ -1,0 +1,73 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+  width: 100%;
+  padding: 140px 40px;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+  width: 100%;
+  max-width: 1440px;
+}
+
+.headingRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  font-family: "Geist", "Geist Placeholder", sans-serif;
+  font-size: 96px;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 1em;
+  color: #000;
+  margin: 0;
+}
+
+.agentGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+@media (max-width: 809px) {
+  .section {
+    padding: 140px 24px;
+  }
+
+  .container {
+    gap: 40px;
+  }
+
+  .title {
+    font-size: 48px;
+  }
+
+  .agentGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 810px) and (max-width: 1439px) {
+  .title {
+    font-size: 78px;
+  }
+
+  .agentGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
