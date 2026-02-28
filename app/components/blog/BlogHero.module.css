@@ -1,0 +1,114 @@
+.section {
+  padding: 160px 20px 0;
+  background-color: #fff;
+  overflow: clip;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.titleWrapper {
+  display: grid;
+  grid-template-rows: repeat(1, minmax(0, 1fr));
+  grid-template-columns: repeat(12, minmax(50px, 1fr));
+  gap: 10px 20px;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.titleCol {
+  grid-column: span 8;
+}
+
+.title {
+  font-family: "Geist", "Geist Placeholder", sans-serif;
+  font-size: 96px;
+  font-weight: 600;
+  line-height: 1em;
+  letter-spacing: -0.04em;
+  color: #000;
+  margin: 0;
+  overflow: hidden;
+}
+
+.subtitleCol {
+  grid-column: span 4;
+  display: flex;
+  align-items: flex-end;
+}
+
+.subtitle {
+  font-family: "Geist", "Geist Placeholder", sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1em;
+  letter-spacing: -0.04em;
+  color: #000;
+  margin: 0;
+  text-wrap: balance;
+}
+
+@media (max-width: 1439px) and (min-width: 810px) {
+  .section {
+    padding: 160px 20px 0;
+  }
+
+  .title {
+    font-size: 78px;
+  }
+
+  .subtitle {
+    font-size: 24px;
+  }
+
+  .titleWrapper {
+    flex-direction: row;
+    display: flex;
+    place-content: center flex-start;
+    align-items: center;
+  }
+
+  .titleCol {
+    flex: 1;
+  }
+
+  .subtitleCol {
+    flex: 1;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 809px) {
+  .section {
+    padding: 120px 20px 0;
+  }
+
+  .container {
+    padding: 0 24px;
+  }
+
+  .title {
+    font-size: 48px;
+  }
+
+  .titleWrapper {
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+  }
+
+  .titleCol {
+    flex: 1;
+  }
+
+  .subtitleCol {
+    flex: 1;
+  }
+
+  .subtitle {
+    font-size: 28px;
+  }
+}
